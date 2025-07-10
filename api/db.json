@@ -1,0 +1,164 @@
+{
+  "paises": [
+    {
+        "id": 1,
+        "nombre": "Perú",
+        "continente": "América del Sur",
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Peru.svg",
+        "poblacion": 34,
+        "clima": "Variado, tropical en la selva, árido en la costa, templado en la sierra"
+    },
+    {
+        "id": 2,
+        "nombre": "Japón",
+        "continente": "Asia",
+        "imagen": "https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg",
+        "poblacion": 125,
+        "clima": "Templado con estaciones marcadas, veranos cálidos y húmedos"
+    },
+    {
+        "id": 3,
+        "nombre": "Alemania",
+        "continente": "Europa",
+        "imagen": "https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg",
+        "poblacion": 83,
+        "clima": "Templado, inviernos fríos y veranos suaves"
+    },
+    {
+        "id": 4,
+        "nombre": "Nigeria",
+        "continente": "África",
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_Nigeria.svg",
+        "poblacion": 223,
+        "clima": "Tropical, seco en el norte y húmedo en el sur"
+    },
+    {
+        "id": 5,
+        "nombre": "Australia",
+        "continente": "Oceanía",
+        "imagen": "https://upload.wikimedia.org/wikipedia/en/b/b9/Flag_of_Australia.svg",
+        "poblacion": 26,
+        "clima": "Mayormente árido o semiárido, templado en el sur"
+    },
+    {
+        "id": 6,
+        "nombre": "Canadá",
+        "continente": "América del Norte",
+        "imagen": "https://upload.wikimedia.org/wikipedia/en/c/cf/Flag_of_Canada.svg",
+        "poblacion": 39,
+        "clima": "Frío en el norte, templado en el sur"
+    },
+    {
+        "id": 7,
+        "nombre": "India",
+        "continente": "Asia",
+        "imagen": "https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg",
+        "poblacion": 1428,
+        "clima": "Tropical en el sur, más templado en el norte"
+    },
+    {
+        "id": 8,
+        "nombre": "Egipto",
+        "continente": "África",
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg",
+        "poblacion": 111,
+        "clima": "Desértico, muy caluroso y seco"
+    },
+    {
+        "id": 9,
+        "nombre": "Brasil",
+        "continente": "América del Sur",
+        "imagen": "https://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg",
+        "poblacion": 216,
+        "clima": "Tropical, ecuatorial en el norte, templado en el sur"
+    },
+    {
+        "id": 10,
+        "nombre": "China",
+        "continente": "Asia",
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg",
+        "poblacion": 1412,
+        "clima": "Variado, subártico al norte, tropical al sur"
+    },
+    {
+        "id": 11,
+        "nombre": "Francia",
+        "continente": "Europa",
+        "imagen": "https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg",
+        "poblacion": 68,
+        "clima": "Templado, veranos cálidos e inviernos frescos"
+    },
+    {
+        "id": 12,
+        "nombre": "México",
+        "continente": "América del Norte",
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg",
+        "poblacion": 128,
+        "clima": "Tropical en el sur, desértico en el norte"
+    },
+    {
+        "id": 13,
+        "nombre": "Italia",
+        "continente": "Europa",
+        "imagen": "https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg",
+        "poblacion": 59,
+        "clima": "Mediterráneo, con veranos secos e inviernos suaves"
+    },
+    {
+        "id": 14,
+        "nombre": "Sudáfrica",
+        "continente": "África",
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/a/af/Flag_of_South_Africa.svg",
+        "poblacion": 60,
+        "clima": "Templado, seco en el oeste, subtropical en el este"
+    },
+    {
+        "id": 15,
+        "nombre": "Corea del Sur",
+        "continente": "Asia",
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg",
+        "poblacion": 52,
+        "clima": "Templado, con inviernos fríos y veranos calurosos"
+    },
+    {
+        "id": 16,
+        "nombre": "Argentina",
+        "continente": "América del Sur",
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg",
+        "poblacion": 46,
+        "clima": "Templado, subtropical al norte y subpolar al sur"
+    },
+    {
+        "id": 17,
+        "nombre": "España",
+        "continente": "Europa",
+        "imagen": "https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg",
+        "poblacion": 48,
+        "clima": "Mediterráneo, seco y cálido"
+    },
+    {
+        "id": 18,
+        "nombre": "Indonesia",
+        "continente": "Asia",
+        "imagen": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Indonesia.svg",
+        "poblacion": 277,
+        "clima": "Tropical, cálido y húmedo"
+    },
+    {
+        "id": 19,
+        "nombre": "Rusia",
+        "continente": "Europa/Asia",
+        "imagen": "https://upload.wikimedia.org/wikipedia/en/f/f3/Flag_of_Russia.svg",
+        "poblacion": 144,
+        "clima": "Subártico y continental, muy frío en invierno"
+    },
+    {
+        "id": 20,
+        "nombre": "Estados Unidos",
+        "continente": "América del Norte",
+        "imagen": "https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg",
+        "poblacion": 339,
+        "clima": "Muy variado, desde ártico en Alaska hasta tropical en Florida"
+    }
+  ]
+}
