@@ -1,6 +1,7 @@
-export interface Pais {
+export interface Country {
   name: {
     official: string;
+    common?:string;
   };
   region: string;
   subregion: string;

@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import type { Pais } from "../types/Pais";
+import type { Country } from "../types/Country";
 
 export const apiPais = createApi({
     reducerPath: 'apiPais',
@@ -7,7 +7,7 @@ export const apiPais = createApi({
         baseUrl: 'https://restcountries.com/v3.1/'
     }),
     endpoints:(builder)=>({
-        getPaises: builder.query<Pais[], void>({
+        getPaises: builder.query<Country[], void>({
             query: ()=> 'all?fields=name,region,capital,subregion,languages,flags,population,area,currencies'        
         })
     })

@@ -1,6 +1,6 @@
-import { useGetPaisesQuery } from "../../application/services/apiPais";
-import type { Pais } from "../../application/types/Pais";
-import Card from "../components/card";
+import { useGetPaisesQuery } from "../../application/services/apiCountry";
+import type { Country } from "../../application/types/Country";
+import Card from "../components/countries/CountryCard";
 
 const Banner = ()=>{
     const { data: paises, isLoading } = useGetPaisesQuery();
@@ -9,13 +9,11 @@ const Banner = ()=>{
     const paisesFiltrados = paises?.slice(0,10)
 
     return(
-        <>
             <div className="w-full h-100">
-                {paisesFiltrados?.map((pais: Pais, index: number) => (
+                {paisesFiltrados?.map((pais: Country, index: number) => (
                     <Card key={index} {...pais} />
                 ))}
             </div>
-        </>
     )
 }
 

@@ -1,9 +1,9 @@
 import Banner from "../sections/BannerSection"
 
 const InicioPage = () =>{
-    return(<>
+    return(
         <Banner/>
-    </>)
+    )
 }
 
 export default InicioPage
