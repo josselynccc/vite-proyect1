@@ -7,14 +7,19 @@ export const apiComment = createApi({
         baseUrl: 'https://jsonplaceholder.typicode.com/'
     }),
     endpoints:(builder)=>({
+        //crear comentario
         createComment: builder.mutation<CommentResponse,Comment>({
             query: (newPost : Comment)=>({
                 url:'comments',
                 method: 'POST',
                 body: newPost
             })
+        }),
+        //listar comentario
+        getComments: builder.query<CommentResponse[], void>({
+            query: ()=> 'posts/100/comments'
         })
     })
 })
 
-export const { useCreateCommentMutation } = apiComment
+export const { useCreateCommentMutation, useGetCommentsQuery } = apiComment

@@ -1,8 +1,12 @@
-import Banner from "../sections/BannerSection"
+import BannerSection from "../sections/BannerSection"
+import CommentsSection from "../sections/CommentsSection"
 
 const InicioPage = () =>{
     return(
-        <Banner/>
+        <>
+        <BannerSection/>
+        <CommentsSection/>
+        </>
     )
 }
 

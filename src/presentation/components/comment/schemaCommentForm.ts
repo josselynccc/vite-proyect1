@@ -1,6 +1,7 @@
 import {z} from 'zod'
 
-export const schemaCommentForm = z.object({
+export const schemaCommentForm = z.object({ 
+    postId: z.number().min(1),
     name: z.string()
             .min(1, "El nombre es requerido"),
     email: z.email("Correo Invalido").trim()

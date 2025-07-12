@@ -1,8 +1,13 @@
-import { useEffect, useMemo, useState } from "react";
-import { useGetPaisesQuery } from "../../application/services/apiCountry";
-import type { Country } from "../../application/types/Country";
-import Card from "../components/countries/CountryCard";
-import Filter, { type FormInputFilter } from "../components/countries/Filter";
+import { useEffect, useMemo, useState } from "react"
+import { useGetPaisesQuery } from "../../application/services/apiCountry"
+import type { Country } from "../../application/types/Country"
+import Card from "../components/countries/CountryCard"
+import Filter, { type FormInputFilter } from "../components/countries/Filter"
+
+import { HiArrowRightCircle } from "react-icons/hi2"
+import { HiArrowLeftCircle } from "react-icons/hi2"
+import { FaAngleDoubleRight } from "react-icons/fa"
+import { FaAngleDoubleLeft } from "react-icons/fa"
 
 const ITEMS_PER_PAGE = 10;
 
@@ -69,34 +74,78 @@ const PaisesSection = () => {
             </div>
             
             {totalPages >= 1 && (
-                <div className="flex justify-center gap-2 p-4">
+                <div className="flex justify-center items-center gap-2 p-4">
                     <button onClick={() => goToPage(currentPage - 1)}
                         disabled={currentPage === 1}
-                        className="text-sm px-4 py-2 bg-amber-400 text-white rounded disabled:bg-gray-500"
+                        className="text-amber-400  rounded-full w-8 disabled:text-gray-500 hover:text-amber-50"
+                    ><HiArrowLeftCircle className="w-full h-full " /></button>
+
+                    {/*primera pagina*/}
+                    <button
+                    onClick={() => goToPage(1)}
+                    className={`w-10 rounded ${
+                        1 === currentPage 
+                        ? 'bg-amber-500 text-white' 
+                        : 'bg-amber-50 text-black hover:bg-amber-400 hover:text-white'
+                    }`}
                     >
-                        Anterior
+                    1
                     </button>
-                    
-                    
-                    {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
-                        <button key={page}
-                            onClick={() => goToPage(page)}
-                            className={`w-10 rounded hover:bg-amber-400 hover:text-white ${
-                                page === currentPage 
-                                    ? 'bg-amber-500 text-white' 
-                                    : 'bg-amber-50 text-black'
-                            }`}
-                        >
-                            {page}
-                        </button>
-                    ))}
-                    
+
+                    {/* mostrar punto si estoy en la pagina 4*/}
+                    {currentPage > 3 && <FaAngleDoubleLeft className="text-white" />}
+
+                    {/* mostrar pagina anterior a la actual */}
+                    {currentPage > 2 && currentPage <= totalPages - 1 && (
+                    <button
+                        onClick={() => goToPage(currentPage - 1)}
+                        className="w-10 rounded bg-amber-50 text-black hover:bg-amber-400 hover:text-white"
+                    >
+                        {currentPage - 1}
+                    </button>
+                    )}
+
+                    {/* mostrar pagina actual*/}
+                    {currentPage > 1 && currentPage < totalPages && (
+                    <button
+                        onClick={() => goToPage(currentPage)}
+                        className="w-10 rounded bg-amber-500 text-white"
+                    >
+                        {currentPage}
+                    </button>
+                    )}
+
+                    {/* mostrar pagina siguiente a la actual */}
+                    {currentPage < totalPages - 1 && currentPage >= 1 && (
+                    <button
+                        onClick={() => goToPage(currentPage + 1)}
+                        className="w-10 rounded bg-amber-50 text-black hover:bg-amber-400 hover:text-white"
+                    >
+                        {currentPage + 1}
+                    </button>
+                    )}
+
+                    {/* Mostrar puntos suspensivos si estamos lejos de la última página */}
+                    {currentPage < totalPages - 2 && <FaAngleDoubleRight className="text-white"/>}
+
+                    {/* Siempre mostrar última página (si es diferente de la primera) */}
+                    {totalPages > 1 && (
+                    <button
+                        onClick={() => goToPage(totalPages)}
+                        className={`w-10 rounded ${
+                        totalPages === currentPage 
+                            ? 'bg-amber-500 text-white' 
+                            : 'bg-amber-50 text-black hover:bg-amber-400 hover:text-white'
+                        }`}
+                    >
+                        {totalPages}
+                    </button>
+                    )}
+
                     <button onClick={() => goToPage(currentPage + 1)}
                         disabled={currentPage === totalPages}
-                        className=" text-sm px-4 py-2 bg-amber-400 text-white rounded disabled:bg-gray-500"
-                    >
-                        Siguiente
-                    </button>
+                        className="text-amber-400 rounded-full w-8 disabled:text-gray-500 hover:text-amber-50"
+                    ><HiArrowRightCircle className="w-full h-full "/></button>
                 </div>
             )}
         </>
